@@ -1,0 +1,41 @@
+.header {
+  background-color: #303030;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+  img {
+    margin: 10px 20px;
+    height: 40px;
+  }
+
+  ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    li {
+      display: flex;
+      margin: 0px;
+    }
+
+    a {
+      padding: 20px;
+      color: white;
+      text-decoration: none;
+      transition: 500ms ease;
+      border-radius: 5rem;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a:hover {
+      transition: 500ms ease;
+      background-color: #ffffff41;
+      color: #303030;
+    }
+  }
+}
