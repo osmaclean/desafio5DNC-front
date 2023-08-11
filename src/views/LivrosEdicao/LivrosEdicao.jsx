@@ -32,7 +32,7 @@ const LivrosEdicao = () => {
       livro.editora != undefined &&
       livro.editora != ""
     ) {
-      await LivrosService.updateLivro(Number(livro.id), body)
+      await LivrosService.updateLivro(Number(livro._id), body)
         .then(({ data }) => {
           alert(data.mensagem);
         })
