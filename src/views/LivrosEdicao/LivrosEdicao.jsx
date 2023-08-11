@@ -17,19 +17,16 @@ const LivrosEdicao = () => {
 
   async function editLivro() {
     const body = {
-      id: Number(livro.id),
       titulo: livro.titulo,
-      num_paginas: Number(livro.num_paginas),
+      paginas: Number(livro.paginas),
       isbn: livro.isbn,
       editora: livro.editora,
     };
     if (
-      livro.id != undefined &&
-      livro.id != "" &&
       livro.titulo != undefined &&
       livro.titulo != "" &&
-      livro.num_paginas != undefined &&
-      livro.num_paginas != "" &&
+      livro.paginas != undefined &&
+      livro.paginas != "" &&
       livro.isbn != undefined &&
       livro.isbn != "" &&
       livro.editora != undefined &&
@@ -74,9 +71,9 @@ const LivrosEdicao = () => {
                 type="text"
                 required
                 onChange={(event) => {
-                  setLivro({ ...livro, num_paginas: event.target.value });
+                  setLivro({ ...livro, paginas: event.target.value });
                 }}
-                value={livro.num_paginas || ""}
+                value={livro.paginas || ""}
               ></input>
             </div>
             <div className="form-group">
