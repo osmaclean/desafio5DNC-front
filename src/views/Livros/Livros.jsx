@@ -42,12 +42,12 @@ const Livros = () => {
         <h1>Escolha o seu livro</h1>
         <ul>
           {livros.map((livro) => (
-            <li key={livro.id}>
+            <li key={livro._id}>
               {livro.titulo}
               <span>{livro.editora}</span>
               <div className="botoes">
                 <div>
-                  <Link className="btn edit" to={`/livros/edicao/${livro.id}`}>
+                  <Link className="btn edit" to={`/livros/edicao/${livro._id}`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -64,7 +64,7 @@ const Livros = () => {
                   <Link
                     className="btn delete"
                     onClick={() => {
-                      deleteLivro(livro.id);
+                      deleteLivro(livro._id);
                     }}
                   >
                     <svg
